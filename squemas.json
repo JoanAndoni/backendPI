@@ -1,0 +1,52 @@
+// Update model: Joan
+user: {
+    id,
+    username,
+    name,
+    email,
+    password,
+    documents: [],
+    documentsInvitation: []
+}
+// Create Model : Cesar
+document: {
+    id,
+    url,
+    hash,
+    users: [
+        {
+        id,
+        status,
+        token: {},
+        charge: {}
+        }
+    ],
+    paymentAmount,
+    paymentDone
+}
+// Servicios
+
+/user: {
+    /register: Done // Joan
+    /authenticate: Done // Joan
+    /profile: Done // Joan
+    /delete: not done // Joan
+
+    /getDocByUserId: Not done // Enrique
+    /aproveDoc: Not done (Check users.status === ok => callFunction /pay) //
+}
+
+/document: {
+    /create: Not done // Cesar
+    /updatePayment: Not done (Pagos) // Enrique
+    /updateHash:  Not done // Enrique
+    /delete: Not done (Parcial from users) // Enrique
+
+    /getUsersByDocId: Not done // Enrique
+    /makeHash: Not done (When document.users === aproved) // No
+}
+
+/payment: {
+    /generateToken: Not done (Returns the token with the card information) // Joan
+    /pay: Not done (Make the charges to the users) // Joan
+}
