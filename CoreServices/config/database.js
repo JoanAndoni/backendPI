@@ -1,5 +1,4 @@
 module.exports = {
-  database: 'mongodb://localhost:27017/app',
-  // If you have a secret password for your data base
+  database: 'mongodb+srv://user:imgoingtograduate@documentsblockchain-yuhgo.gcp.mongodb.net/test?retryWrites=true&w=majority',
   secret: ' '
 }

@@ -17,17 +17,17 @@ const config = require('./config/database');
 mongoose.connect(config.database, {
   useNewUrlParser: true,
   useUnifiedTopology: true
-});
+})
 
 // Connect to the database and log out if it was successful
 mongoose.connection.on('connected', () => {
-  console.log('Connected to the database ' + config.database);
-});
+  console.log('Connected to the database in atlas');
+})
 
 // Logout if the connect was failed
 mongoose.connection.on('error', (err) => {
   console.log('Database error: ' + err);
-});
+})
 
 // Initialize Express
 const app = express();
@@ -60,10 +60,6 @@ app.use('/users', users);
 // Index Route / show as invalid end point
 app.get('/', (req, res) => {
   res.send('Invalid Endpoint');
-});
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 // Start Server on the port setted

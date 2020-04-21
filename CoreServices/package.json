@@ -8,15 +8,15 @@
     "start": "node app"
   },
   "dependencies": {
-    "@angular-devkit/build-angular": "^0.803.26",
+    "@angular-devkit/build-angular": "^0.803.23",
     "bcryptjs": "*",
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.9",
-    "nodemon": "^1.19.4",
-    "passport": "^0.4.1",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "^5.8.10",
+    "nodemon": "^1.18.10",
+    "passport": "*",
     "passport-jwt": "*",
     "to": "^0.2.9",
     "update": "^0.7.4"
