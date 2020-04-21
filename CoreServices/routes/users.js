@@ -11,7 +11,10 @@ router.post('/register', (req, res, next) => {
   let newUser = new User({
     name: req.body.name,
     username: req.body.username,
-    password: req.body.password
+    email: req.body.email,
+    password: req.body.password,
+    documents: [],
+    documentsInvitation: []
   });
 
   // Add the user to the db
@@ -44,7 +47,7 @@ router.post('/authenticate', (req, res, next) => {
     if (!user) {
       return res.json({
         success: false,
-        msg: 'user'
+        msg: 'user not found'
       });
     }
 

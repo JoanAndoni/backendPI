@@ -4,16 +4,23 @@ const config = require('../config/database');
 
 const UserSchema = mongoose.Schema({
   name: {
-    type: String
+    type: String,
+    required: true
   },
   username: {
+    type: String,
+    required: true
+  },
+  email: {
     type: String,
     required: true
   },
   password: {
     type: String,
     required: true
-  }
+  },
+  documents: [],
+  documentsInvitation: []
 });
 
 // Create user / Use this from outside / Send it to the mongoDB
