@@ -66,3 +66,66 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log('Server started on port ' + port);
 });
+
+// Documents model
+function DocumentModel(){
+
+  const DocumentSchema = mongoose.Schema({
+    url: {
+      type: String, 
+      required: true
+    },
+    hash: {
+      type: String,
+      required: true
+    },
+    users: [{
+      id:{
+        type: String,
+        required: true
+      },
+      status:{
+        type: Boolean, 
+        required: true
+      },
+      token:{
+        type: String, 
+        required: true
+      },
+      charge:{
+        type: Number,
+        required: true
+      }
+    }],
+    paymentAmount:{
+      type: Number, 
+      requiered: true
+    },
+    paymentDone:{
+      type: Boolean,
+      required: true
+    }
+  });
+
+  const Document = module.exports = mongoose.model('Document', DocumentSchema);
+
+  module.exports.getDocumentById = function (id, callback) {
+    Document.findById(id, callback);
+  }
+
+  module.exports.addDocument = function (newDoc, callback){
+    newDoc.save(callback)
+  }
+
+  const handler = async event =>{
+    await validateData(event)
+    const DocData = getDocumentById(event[0])
+    const SaveDoc = addDocument(event[1])
+    return {
+      Documet: DocData, 
+      SavedDoc = SaveDoc,
+    }
+  }  
+  
+  module.exports = {handler}
+}
