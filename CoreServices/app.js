@@ -123,7 +123,7 @@ function DocumentModel(){
     const SaveDoc = addDocument(event[1])
     return {
       Documet: DocData, 
-      SavedDoc = SaveDoc,
+      SavedDoc: SaveDoc,
     }
   }  
   
