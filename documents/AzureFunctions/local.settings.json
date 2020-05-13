@@ -1,0 +1,14 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=storageaccountapren8dfe;AccountKey=hZhCos7ErJjoGxbhm6TY89Pq3uDarK6oU0isc6hIO3yC+UZgHDoA/Pb0+IytsJw8MudoCY0rdEivxLYxdKpFAw==;EndpointSuffix=core.windows.net",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "FUNCTIONS_EXTENSION_VERSION": "~3",
+    "APPINSIGHTS_INSTRUMENTATIONKEY": "3828363d-092b-40cf-9186-20180e1cb91d",
+    "APPLICATIONINSIGHTS_CONNECTION_STRING": "InstrumentationKey=3828363d-092b-40cf-9186-20180e1cb91d",
+    "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "DefaultEndpointsProtocol=https;AccountName=storageaccountapren8dfe;AccountKey=hZhCos7ErJjoGxbhm6TY89Pq3uDarK6oU0isc6hIO3yC+UZgHDoA/Pb0+IytsJw8MudoCY0rdEivxLYxdKpFAw==;EndpointSuffix=core.windows.net",
+    "WEBSITE_CONTENTSHARE": "documentosblock84e0",
+    "WEBSITE_NODE_DEFAULT_VERSION": "~12",
+    "MongodbAtlas": "mongodb+srv://user:imgoingtograduate@documentsblockchain-yuhgo.gcp.mongodb.net/test?retryWrites=true&w=majority"
+  }
+}
